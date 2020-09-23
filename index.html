@@ -7,13 +7,15 @@
 
 <html lang="en">
 <head>
-  <title>Bingzhe Li</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-  <link href='https://fonts.googleapis.com/css?family=Oswald:700' rel='stylesheet' type='text/css'>
+	<title>Bingzhe Li</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<link href='https://fonts.googleapis.com/css?family=Oswald:700' rel='stylesheet' type='text/css'>
+	
+
 
 	<style>
 	* {
@@ -21,9 +23,18 @@
 	}
 
 	/* Create two equal columns that floats next to each other */
-	.column {
+	.column_left {
 	  float: left;
-	  width: 50%;
+	  margin-left: 250px;
+	  width: 10%;
+	  padding: 10px;
+	  height: 300px; /* Should be removed. Only for demonstration */
+	}
+	.column_right {
+	  float: right;
+	  margin-right: 400px;
+	  margin-top: 20px;
+	  width: 40%;
 	  padding: 10px;
 	  height: 300px; /* Should be removed. Only for demonstration */
 	}
@@ -34,85 +45,135 @@
 	  display: table;
 	  clear: both;
 	}
+	.center_img{
+		  top: 100%;
+		  right: 0px;
+	}
+	
 	</style>
   
 </head>
 <body>
 
-
 <!-- Navigation -->
-	<nav class="navbar navbar-inverse navbar-static-top" role="navigation">
-	  <div class="container">
-		<div class="navbar-header">
-		  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-						<span class="sr-only">Toggle navigation</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-		</div>
-
-		<!-- Collect the nav links, forms, and other content for toggling -->
-		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-		  <ul class="nav navbar-nav">
-				  <li><a href="index.html">Home</a></li>
-				  <li><a href="Research.html">Research</a></li>
-				  <li><a href="Publications.html">Publications</a></li> 
-				  <li><a href="Teaching.html">Teaching</a></li>
-				  <li><a href="Service.html">Service</a></li>
-		  </ul>
-		</div>
-	  </div>
-	</nav>
-	
-	
-	<!-- Image plus basic information -->
-	<div class="row">
-	  <style>
-		img {
-		  border-radius: 50%;
-		}
-	  </style>
-	  <div class="column" style="background-color:#aaa;">
-		<img src="1.JPG" alt="Paris" width="300" height="300">
-	  </div>
-	  <div class="column" style="background-color:#bbb;">
-		<h2>Column 2</h2>
-		<p>Some text..</p>
-	  </div>
+<nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+  <div class="container">
+	<div class="navbar-header">
+	  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
 	</div>
-	
-    <!-- /.container -->
-  <!-- Page Content -->
-    <div class="container">
-		<div class="row">
 
-            <!-- Entries Column -->
-            <div class="col-md-8" style="height: 100vh;">
-                
-                <!-- Main Image -->
-                <img class="img-responsive" src="photo.gif" alt=""><br>
-                
-                <div style="margin-top:3%; text-align:justify;">                
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing <a href="#">elit</a>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-					
-					<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-					
-					<p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-                </div>
-            </div> 
+	<!-- Collect the nav links, forms, and other content for toggling -->
+	<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	  <ul class="nav navbar-nav">
+			  <li><a href="index.html">Home</a></li>
+			  <li><a href="Research.html">Research</a></li>
+			  <li><a href="Publications.html">Publications</a></li> 
+			  <li><a href="Teaching.html">Teaching</a></li>
+			  <li><a href="Service.html">Service</a></li>
+	  </ul>
+	</div>
+  </div>
+</nav>
 
-        
+<!-- Image plus basic information -->
+<div class="row">
+  <style>
+	img {
+	  border-radius: 50%;
+	}
+ </style>
+  <div class="column_left" >
+	<img src="img/bingzhe.PNG" align="middle" alt="bingzhe" width="250" height="250">
+  </div>
+  <div class="column_right" style="">
+	<p style="font-family:verdana; font-size:25px; font-weight:bold;"> Bingzhe Li</p>
+	<p style="font-family:verdana;"> Assistant Professor <br> 
+	School of Electrical and Computer Engineering <br>
+	Oklahoma State University<br><br>
+	Office: GAB 206, 626 Morrill Ave #0068, Stillwater, OK 74074<br>
+	Email: bingzhe dot li at okstate dot edu<br>
+	Phone: 405-744-3602
+	</p>
+  </div>
+</div>
 
-            
-        </div>
+<!-- /.container -->
+<!-- Page Content -->
+<div class="container">
+	<div class="row">
+		<!-- Entries Column -->
+		<div class="col-md-8" style="height: 35vh;">
+			<div style="text-align:justify;margin-left:50px;width: 130%;">                
+				<p>I am currently an Assistant  Professor in the School of Electrical and Computer Engineering at Oklahoma State University. Prior to that, I was a Postdoctoral Associate in the Department of Computer Science and Engineering at the University of Minnesota, Twin Cities, advised by Prof. David Du. I received my Ph.D. degree in Electrical Engineering from the University of Minnesota, Twin Cities in 2018, under the supervision of Prof. David Lilja. <br> <br>
+				I am interested in two main research directions. One lies in computer systems, including memory/storage systems, systems architecture, and storage system security. The other focuses on low-cost hardware design in edge computing and IoT. Specifically,  my research fields include: <br> 
+				&#8226; Intelligent storage system<br> 
+				&#8226; Energy-efficient and low-power computing architecture<br> 
+				&#8226; Machine learning<br> 
+				&#8226; Performance evaluation and modeling on emerging technologies and systems</p>
+				
+			</div>
+		</div> 
+		
+		<!-- Recuiting students -->
+		<div class="col-md-8" style="height: 10vh;">
+			<div style="text-align:justify;margin-left:50px;width: 130%;"> 
+			<p style="font-family:verdana; font-weight:bold;"> I am looking for self-motivated students who are interested in pursuing Ph.D. degrees on the topic of developing storage and computer systems or designing energy/time-efficient computing architecture for intelligent systems.</p>
+			</div>
+		</div> 
+		
+		<!-- News -->
+		<div class="col-md-8" style="height: 20vh;">
+			<div style="text-align:justify;margin-left:50px;width: 130%;"> 
+			<p style="font-family:verdana; color:red; font-weight:bold;"> Recent news:</p>
+			<!-- News body -->
+			<p> &#8226;08/2020 Joined Oklahoma State University as an Assistant Professor <br>
+			</div>
+		
+			<!-- Prior news -->
+			<div class="container" style="margin-left:30px;">
+			  <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo">Prior news </button>
+			  <div id="demo" class="collapse" >
+					<p>&#8226;08/2020 Joined Oklahoma State University as an Assistant Professor <br>
+					&#8226;04/2020 One paper is accepted by The 12th USENIX Workshop on Hot Topics in Storage and File Systems (HotStorage'20)<br>
+					&#8226;04/2020 One paper is accepted by IEEE Transactions on Computers (TC)<br>
+					&#8226;11/2019 One paper is accepted by ACM Transactions on Modeling and Performance Evaluation of Computing Systems (ACM TOMPECS)<br>
+					&#8226;06/2019 One paper is accepted by IEEE/ACM 2019 International Conference On Computer Aided Design (ICCAD'19)<br>
+					&#8226;06/2019 One US provisional patent application is filled<br>
+					&#8226;05/2019 One paper is accepted by IEEE Transactions on Electron Devices (IEEE T-ED)<br>
+					&#8226;04/2019 One paper is accepted by The 11th USENIX Workshop on Hot Topics in Storage and File Systems (HotStorage'19)<br>
+					&#8226;03/2019 One US provisional patent application is filled<br>
+					&#8226;02/2019 Invited to serve as a Program Committee member for ISVLSI'19<br>
+					&#8226;02/2019 Two papers are accepted by The 29th edition of the ACM Great Lakes Symposium on VLSI (GLSVLSI'19)  <br>
+					&#8226;01/2019 One paper is accepted by ACM Journal on Emerging Technologies in Computing (ACM JETC)<br>
+					&#8226;12/2018 One paper is accepted by The 17th USENIX Conference on File and Storage Technologies (FAST '19) <br> 
+					&#8226;12/2018 One paper is accepted by The 22nd International Symposium on Quality Electronic Design (ISQED'19)<br>
+					&#8226;11/2018 One paper is accepted by Elsevier Performance Evaluation <br>
+					&#8226;11/2018 One paper is accepted by The 2019 ACM/IEEE Conference on Design, Automation and Test in Europe  (DATE'19)<br>
+					&#8226;10/2018 One paper is accepted by ACM Journal on Emerging Technologies in Computing (ACM JETC)<br>
+					&#8226;09/2018 One paper is accepted by The 9th IEEE Annual Ubiquitous Computing, Electronics & Mobile Communication Conference (IEEE UEMCON’18 )<br>
+					&#8226;07/2018 One paper is accepted by The 13th International Conference on Networking, Architecture, and Storage (NAS'18)<br>
+					&#8226;05/2018 The storage I/O re-player tool - TraceRAR is released! [Code]<br>
+					&#8226;04/2018 One paper is accepted by The 10th USENIX Workshop on Hot Topics in Storage and File Systems (HotStorage'18)<br>
+					&#8226;04/2018 One paper is accepted by The 27th International Workshop on Logic & Synthesis (IWLS'18)<br>
+					&#8226;12/2017 One paper is accepted by The 21st International International Symposium on Quality Electronic Design (ISQED'18)<br>
+					&#8226;08/2017  One paper is accepted by The 35th  IEEE International Conference on Computer Design (ICCD'17)<br>
+					&#8226;07/2017 One paper is accepted by The 12th International Conference on Networking, Architecture, and Storage (NAS'17)<br>
+					&#8226;07/2017 One paper is accepted by The 2017 IEEE International Conference on Parallel and Distributed Systems (ICPADS'17)<br>
+					&#8226;07/2016 One paper is accepted by The 11th International Conference on Networking, Architecture, and Storage (NAS'16)<br>
+					&#8226;11/2015 One paper is accepted by The 24th ACM/SIGDA International Symposium on Field-Programmable Gate Arrays (FPGA'16)<br>
+					&#8226;04/2015 One paper is accepted by The 27th Annual IEEE International Conference on Application-specific Systems, Architectures and Processors (ASAP'16)</p>
+			  </div>
+			</div>
+		</div>            
+	</div>
+</div>
 
-
-    </div>
-    <!-- /.container -->
-    
-    <!-- Other people may like it too! -->
-    <a style="color:#b5bec9;font-size:0.8em; float:right;" href="https://github.com/mavroudisv/plain-academic">Plain Academic</a> 
+<script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=fwTe1IDAk0R0s_W7364cfl12ppYaYf0rBUtvEp5hG5U"></script>
     
 </body>
 
