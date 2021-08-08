@@ -1,6 +1,28 @@
 <!DOCTYPE html>
-
 <html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv = "X-UA-Compatible" content="ie=edge">
+	<title>particles.js</title>
+	<link rel="stylesheet" href="css/style2.css">
+</head>
+
+<!-- Header of Particles! -->
+<body>
+	<div id="particles-js"></div>
+	<script src="js/particles.js"></script>
+	<script src="js/app2.js"></script>
+	<!-- <script src = "js/particles.min.js"></script> 
+	<script>
+		particlesJS.load('particles-js', 'particles.json', function(){
+			console.log('particles.json loaded...');
+		});
+	</script>
+	-->
+</body>
+
 <head>
 	<title>Bingzhe Li</title>
 	<meta charset="utf-8">
@@ -17,20 +39,22 @@
 	  box-sizing: border-box;
 	}
 
-	/* Create two equal columns that floats next to each other */
+	/* Create two equal columns that floats next to each other 50px*/
 	.column_left {
 	  float: left;
 	  margin-left: 50px;
 	  width: 10%;
 	  padding: 00px;
 	  height: 300px; /* Should be removed. Only for demonstration */
+
 	}
 	.column_right {
 	  float: right;
 	  margin-right: 300px;
-	  width: 40%;
+	  width: 30%;
 	  padding: 00px;
-	  height: 300px; /* Should be removed. Only for demonstration */
+	  height: 300px; /* Should be removed. Only for demonstration 300px */
+
 	}
 
 	/* Clear floats after the columns */
@@ -49,7 +73,34 @@
 </head>
 <body>
 
+
+
 <!-- Navigation -->
+<style>
+	.navbar { 
+		height: 40px;
+		background-color: rgb(40, 40, 40);
+		font-size: 1.7rem;
+	}
+	.nav.navbar-nav li a {
+		color: #c5c0c0 !important;
+	}
+	.navbar.collapse {
+		display:flex;
+	}
+	.navbar.collapsing,
+	.navbar.show {
+		background:rgb(236, 233, 233) !important;
+	}
+	.nav.navbar-nav li  a.active-page
+	{
+		color: rgb(235, 228, 228) !important;
+		font-weight: bolder !important;
+		font-size: 1.8rem !important;
+	}
+
+</style>
+
 <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
   <div class="container">
 	<div class="navbar-header">
@@ -61,17 +112,21 @@
 				</button>
 	</div>
 
-	<!-- Collect the nav links, forms, and other content for toggling -->
-	<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-	  <ul class="nav navbar-nav">
-			  <li><a href="index.html">Home</a></li>
-			  <li><a href="Publications.html">Publications</a></li>
+	<!-- Collect the nav links, forms, and other content for toggling-->
+	<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" >
+	  	<ul class="nav navbar-nav"> 
+	
+	<!-- <div id="nav_bar">
+		<ul> 	  -->
+			  <li><a href="index.html" class='active-page'>Home</a></li>
+			  <li><a href="Publications.html">Publication</a></li>
 			  <li><a href="Teaching.html">Teaching</a></li>
 			  <li><a href="Service.html">Service</a></li>
 	  </ul>
 	</div>
   </div>
 </nav>
+
 
 <!-- Image plus basic information -->
 <div class="container">
@@ -133,8 +188,10 @@
 			<div style="text-align:justify;margin-left:50px;width: 130%;"> 
 			<p style="font-family:verdana; color:red; font-weight:bold;"> Recent news:</p>
 			<!-- News body -->
-			<p> &#8226;04/2021 Two Papers are accepted by the 14th ACM International System and Storage Conference (Systor'21)<br>
-			<p> &#8226;03/2021 Invited to serve as registration chair for ICCD'21 (Welcome to submit your paper to ICCD'21!)<br>
+			<p> &#8226;07/2021 One Paper is accepted by The 19th IEEE International Symposium on Parallel and Distributed Processing with Applications (ISPA'21)<br>
+			<p> &#8226;05/2021 Invited to serve as registration chair for <a href="http://www.iiswc.org/iiswc2021/index.html">IISWC'21</a><br>
+			<p> &#8226;04/2021 Two Papers are accepted by The 14th ACM International System and Storage Conference (Systor'21)<br>
+			<p> &#8226;03/2021 Invited to serve as registration chair for <a href="https://www.iccd-conf.com/Home.html">ICCD'21</a> (Welcome to submit your paper to ICCD'21!)<br>
 			<p> &#8226;02/2021 One paper is accepted by Design Automation Conference (DAC'21)<br>
 			<p> &#8226;02/2021 One paper is accepted by IEEE Access<br>
 			<p> &#8226;02/2021 'TrackLace' paper has been selected as the Featured Paper in IEEE Transactions on Computers (TC)<br>
@@ -147,7 +204,8 @@
 			<div class="container" style="margin-left:30px;">
 			  <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo">Before 2020.08 </button>
 			  <div id="demo" class="collapse" >
-					<p>&#8226;04/2020 One paper is accepted by The 12th USENIX Workshop on Hot Topics in Storage and File Systems (HotStorage'20)<br>
+					<p>
+					&#8226;04/2020 One paper is accepted by The 12th USENIX Workshop on Hot Topics in Storage and File Systems (HotStorage'20)<br>
 					&#8226;04/2020 One paper is accepted by IEEE Transactions on Computers (TC)<br>
 					&#8226;11/2019 One paper is accepted by ACM Transactions on Modeling and Performance Evaluation of Computing Systems (ACM TOMPECS)<br>
 					&#8226;06/2019 One paper is accepted by IEEE/ACM 2019 International Conference On Computer Aided Design (ICCAD'19)<br>
