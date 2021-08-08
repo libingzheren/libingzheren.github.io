@@ -14,6 +14,30 @@
 <body>
 
 <!-- Navigation -->
+<style>
+	.navbar { 
+		height: 40px;
+		background-color: rgb(40, 40, 40);
+		font-size: 1.7rem;
+	}
+	.nav.navbar-nav li a {
+		color: #c5c0c0 !important;
+	}
+	.navbar.collapse {
+		display:flex;
+	}
+	.navbar.collapsing,
+	.navbar.show {
+		background:rgb(236, 233, 233) !important;
+	}
+	.nav.navbar-nav li  a.active-page
+	{
+		color: rgb(235, 228, 228) !important;
+		font-weight: bolder !important;
+		font-size: 1.8rem !important;
+	}
+</style>
+
 <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
   <div class="container">
 	<div class="navbar-header">
@@ -31,7 +55,7 @@
 			  <li><a href="index.html">Home</a></li>
 			  <li><a href="Publications.html">Publications</a></li>
 			  <li><a href="Teaching.html">Teaching</a></li>
-			  <li><a href="Service.html">Service</a></li>
+			  <li><a href="Service.html" class='active-page'>Service</a></li>
 	  </ul>
 	</div>
   </div>
@@ -45,6 +69,10 @@
 		<div class="col-md-8" style="height: 35vh;">
 			<div style="text-align:justify;margin-left:50px;width: 130%;">                
 				<h1>Service<h1>
+				<!-- /.Conference orgnization committee -->
+				<p style="font-family:verdana; font-size:15px;LINE-HEIGHT:20px;"><strong>Conference Orgnization Committee:</strong>  </p>
+				<p style="font-family:verdana; font-size:13px;LINE-HEIGHT:20px;">&#8226; Registration chair: 2021 IEEE International Conference on Computer Design (ICCD'21) </p>
+				<p style="font-family:verdana; font-size:13px;LINE-HEIGHT:20px;">&#8226; Registration chair: 2021 IEEE International Symposium on Workload Characterization (IISWC'21)</p>
 				<!-- /.Program committee -->
 				<p style="font-family:verdana; font-size:15px;LINE-HEIGHT:20px;"><strong>Program Committee:</strong>  </p>
 				<p style="font-family:verdana; font-size:13px;LINE-HEIGHT:20px;">&#8226; Design Automation Conference (DAC) 2021 </p>
