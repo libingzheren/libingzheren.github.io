@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Class Quiz Submission</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 2rem;
+      background-color: #f9f9f9;
+    }
+    .container {
+      max-width: 600px;
+      margin: auto;
+      padding: 2rem;
+      background-color: #fff;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      border-radius: 8px;
+    }
+    h1 {
+      text-align: center;
+    }
+    label {
+      display: block;
+      margin: 1rem 0 0.5rem;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    button {
+      margin-top: 1.5rem;
+      padding: 0.75rem 1.5rem;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Quiz Submission</h1>
+    <form id="quiz-form">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="student-id">Student ID:</label>
+      <input type="text" id="student-id" name="student_id" required />
+
+      <label for="email">Email Address:</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="answers">Your Answers:</label>
+      <textarea id="answers" name="answers" rows="6" required></textarea>
+
+      <button type="submit">Submit Quiz</button>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById('quiz-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const data = {
+        name: document.getElementById('name').value,
+        student_id: document.getElementById('student-id').value,
+        email: document.getElementById('email').value,
+        answers: document.getElementById('answers').value,
+      };
+
+      fetch('https://script.google.com/macros/s/AKfycbyAMGnaz-dDr7kxUa4KQgJvarS0iuQ5F4Fnaw8f6J5g8MR6JuikkIF9b_f8RTPbrXx7/exec', {
+        method: 'POST',
+        body: JSON.stringify(data),
+        headers: { 'Content-Type': 'application/json' },
+      })
+      .then(response => response.json())
+      .then(res => {
+        if (res.result === 'success') {
+          alert('Quiz submitted successfully!');
+          document.getElementById('quiz-form').reset();
+        } else {
+          alert('There was an error. Please try again.');
+        }
+      })
+      .catch(err => alert('Submission failed. Please try again.'));
+    });
+  </script>
+</body>
+</html>
